@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class ShortUrlComponent {
 
+  nombreUrl: string;
+  urlShort: string;
+  urlProcesada: boolean;
+
+  constructor() {
+    this.nombreUrl = '';
+    this.urlShort = '';
+    this.urlProcesada = false;
+  }
+
+  procesarUrl() {
+    console.log(this.nombreUrl)
+  }
+
 }
