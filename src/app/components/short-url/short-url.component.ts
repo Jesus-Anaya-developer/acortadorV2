@@ -19,10 +19,14 @@ export class ShortUrlComponent {
   }
 
   procesarUrl() {
+    this.urlProcesada = false;
 
     this._shortUrlService.getUrlShort(this.nombreUrl).subscribe(data => {
-      console.log(data);
+      //se le asigna el link de la api(data.link) a la variable urlshort para mostrarla en el html
+      this.urlShort = data.link;
+      this.urlProcesada = true;
     });
+
   }
 
 }
