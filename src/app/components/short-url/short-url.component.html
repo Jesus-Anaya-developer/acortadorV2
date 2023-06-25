@@ -1,4 +1,7 @@
 <div class="container mt-3">
+  <div *ngIf="mostrarError" class="alert alert-dismissible alert-danger">
+    <strong>Lo siento!</strong> {{textError}}
+  </div>
   <h1 class="display-5 text-center">
     Ingrese la URL a acortar
   </h1>
@@ -23,4 +26,5 @@
       </div>
     </div>
   </div>
+  <app-spinner *ngIf="loading"></app-spinner>
 </div>
